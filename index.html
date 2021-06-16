@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="es" class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>ImciSRL</title>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8;">
+    <link rel="stylesheet" type="text/css" href="imcisrl_files/normalize(1).css">
+		
+    <link rel="stylesheet" type="text/css" href="imcisrl_files/demo.css"> 
+    <link rel="stylesheet" type="text/css" href="imcisrl_files/jquery.fancybox.css">
+    <link rel="stylesheet" type="text/css" href="imcisrl_files/styles.css">
+    <link rel="stylesheet" href="/imcisrl_files/css/font-awesome.min.css">
+<!--    <script type="text/javascript" src="/themes/theme-2015-v03-es/js/jquery-1.7.2.min.js"></script> -->
+<script async="" src="imcisrl_files/analytics.js.descarga"></script><script src="imcisrl_files/jquery.min.js.descarga"></script>
+    <script type="text/javascript" src="imcisrl_files/jquery.form.js.descarga"></script>
+    <script type="text/javascript" src="imcisrl_files/jquery.validate.js.descarga"></script>
+    <script type="text/javascript" src="imcisrl_files/jquery.fancybox.js.descarga"></script>
+    <script type="text/javascript" src="imcisrl_files/demo-main.js.descarga"></script>
+    <script charset="utf-8">
+        //TODO: some strange value
+        var min_height = 600;
+        $(function () {
+            resizeFrame();
+        });
+        function resizeFrame() {
+            if (1 == 0
+        )
+            return false;
+            var main_iframe = $('#preview');
+            var height = $(window).height() - $('#preview-bar:visible').outerHeight();
+            /*if ($.browser.opera)
+                height += 5;*/
+            if (height < min_height)
+                height = min_height;
+            $('#preview').height(height);
+            $('#iframelive').height(height);
+            if ($(window).width() < 1400)
+                $('#min-hide-this').hide();
+            else
+                $('#min-hide-this').show();
+ 
+        }
+        $(window).resize(function () {
+            resizeFrame();
+        }).load(function () {
+            resizeFrame();
+        });
+        $(document).ready(function(){
+            $('#close').click(function(e){
+                e.preventDefault();
+                $('#preview-bar').hide();
+            });
+        })
+    </script>
+            
+    <script>
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+   ga('create', 'UA-127799641-1', 'auto');
+   ga('send', 'pageview');
+
+  </script>
+    
+    
+<style type="text/css">.fancybox-margin{margin-right:0px;}</style></head>
+<body id="fullscreen-preview">
+
+<div id="iframelive" class="no-responsive" style="height: 600px;">
+    <div id="preview-wrapper">
+        <iframe id="preview" frameborder="0" src="imcisrl_files/transporte.html" data-src="/imcisrl.html//" style="height: 600px;"></iframe>
+    </div>
+</div>
+
+</body>
+</html>
