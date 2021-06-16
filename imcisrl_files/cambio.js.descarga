@@ -1,0 +1,11 @@
+function cambio(){
+    var dol = parseInt(document.getElementById('var_dolar').value, 10); 
+    
+    var re ;   
+    var pe = parseInt(document.getElementById('pesos').value, 10);
+     
+    re = pe / dol ;
+    document.getElementById('resul').innerHTML= re;
+    
+    }
+    
