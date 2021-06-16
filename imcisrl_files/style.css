@@ -496,7 +496,8 @@ input:-webkit-autofill:focus {
 }
 
 .is-sticky .navbar-brand > img {
-    background-color: #01023b;
+    /* background-color: #01023b; */
+    background-color: #ffffff;
     padding: 30px 15px;
     max-width: 70%;
 }
