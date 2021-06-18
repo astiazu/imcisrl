@@ -338,13 +338,13 @@
                 <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
                     <div class="quote-form-area wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
                         <h3>CONSIGUE UNA COTIZACIÓN</h3>
-                        <form class="quote-form" action="#">
+                        <form name= "getCotizacion"class="quote-form" action="/imcisrl_files/php/getCotizacion.php" method="post"> 
                             <p class="width-full">
                                 <input type="text" name="name" id="name" placeholder="Su Nombre">
                             </p>
                             <p class="width-half">
                                 <input type="email" name="email" id="email" placeholder="Email">
-                                <input class="pull-right" type="number" name="phone" id="phone" placeholder="Teléfono">
+                                <input class="pull-right" type="text" name="phone" id="phone" placeholder="Teléfono">
                             </p>
                             <p class="width-half">
                                 <input type="text" name="type" id="type" placeholder="Tipo">
@@ -608,7 +608,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> 
     </section>
     <!--PROMO AREA END-->
 
