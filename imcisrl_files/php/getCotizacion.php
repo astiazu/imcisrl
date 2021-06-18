@@ -39,15 +39,15 @@
 	echo "Destino: ".$destination."<br>";
 	echo "Mensaje: ".$quote_message."<br>";
 
-	$mensaje=	"Nombre de/la interesado/a: ".$name."\n
-				Direccion de Email: ".$email."\n
-				Teléfono: ".$phone."\n
-				Tipo de carga: ".$type."\n
-				Cantidad: ".$quantity."\n
-				Destino: ".$destination."\n
-				Mensaje: ".$quote_message."\n";
+	// $mensaje=	"Nombre de/la interesado/a: ".$name."\n
+	//			Direccion de Email: ".$email."\n
+	//			Teléfono: ".$phone."\n
+	//			Tipo de carga: ".$type."\n
+	//			Cantidad: ".$quantity."\n
+	//			Destino: ".$destination."\n
+	//			Mensaje: ".$quote_message."\n";
 
 	
 
-	mail($email, "Pedido de cotizacion de ".$name, $mensaje);
+	// mail($email, "Pedido de cotizacion de ".$name, $mensaje);
 ?>
