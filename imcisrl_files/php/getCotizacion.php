@@ -1,53 +1,83 @@
 <?php
+/**
+* @version 1.0
+*/
 
+require("class.phpmailer.php");
+require("class.smtp.php");
 
-	
-//	function verifyName($name){
-//		if(!strpbrk($name, "1234567890.+-*/!#$%&/()=?¡+´][_:;,.-")){
-//			return $name;
-//		}
-//	}
-//
-//	function sendError(){
-//		return "No se cumplen las normas de entrada<br>";
-//	}
-//
-//
-//	$name = verifyName($_POST['name']);
-//	if($name!=null){
-//		//echo "Nombre de/la interesado/a: ".$name."<br>";
-//	}
-//	else{
-//		echo "Nombre de/la interesado/a: ".sendError();
-//	}
-	$name=$_POST['name'];
-	$email=$_POST['email'];
-	$phone=$_POST['phone'];
-	$type=$_POST['type'];
-	$quantity=$_POST['quantity'];
-	$destination=$_POST['destination'];
-	$quote_message=$_POST['quote-message']; 
+//echo "ingresando al formulario"."<br>,$POST["suscriber-mail"];
+$name=$_POST['name'];
+$email=$_POST['email'];
+$phone=$_POST['phone'];
+$type=$_POST['type'];
+$quantity=$_POST['quantity'];
+$destination=$_POST['destination'];
+$quote_message=$_POST['quote-message'];
 
 
 
 
-	echo "Nombre de/la interesado/a: ".$name."<br>";
-	echo "Direccion de Email: ".$email."<br>";
-	echo "Teléfono: ".$phone."<br>";
-	echo "Tipo de carga: ".$type."<br>";
-	echo "Cantidad: ".$quantity."<br>";
-	echo "Destino: ".$destination."<br>";
-	echo "Mensaje: ".$quote_message."<br>";
+// Valores enviados desde el formulario
+if ( !isset($_POST["name"]) ) {
+    echo("Es necesario completar todos los datos del formulario");
+}
+   //$email = $_POST["suscriber-mail"];
+   //$mensaje = $_POST["Suscripcion a la información nueva de la página web"];
 
-	// $mensaje=	"Nombre de/la interesado/a: ".$name."\n
-	//			Direccion de Email: ".$email."\n
-	//			Teléfono: ".$phone."\n
-	//			Tipo de carga: ".$type."\n
-	//			Cantidad: ".$quantity."\n
-	//			Destino: ".$destination."\n
-	//			Mensaje: ".$quote_message."\n";
+   // Datos de la cuenta de correo utilizada para enviar vía SMTP
+   $smtpHost = getenv("imciSmtpHost");  // Dominio alternativo brindado en el email de alta 
+   $smtpUsuario = getenv("imciSmtpUser");  // Mi cuenta de correo
+   $smtpClave = getenv("imciSmtpPassword");  // Mi contraseña
 
-	
+   // Email donde se enviaran los datos cargados en el formulario de contacto
+   $emailDestino = "info@imcisrl.com.ar";
 
-	// mail($email, "Pedido de cotizacion de ".$name, $mensaje);
+   $mail = new PHPMailer();
+   $mail->IsSMTP();
+   $mail->SMTPAuth = true;
+   $mail->Port = 465; 
+   $mail->SMTPSecure = 'ssl';
+   $mail->IsHTML(true); 
+   $mail->CharSet = "utf-8";
+
+
+   // VALORES A MODIFICAR //
+   $mail->Host = $smtpHost; 
+   $mail->Username = $smtpUsuario; 
+   $mail->Password = $smtpClave;
+
+   $mail->From = $email; // Email desde donde envío el correo.
+   //$mail->FromName = $nombre;//
+   $mail->AddAddress($emailDestino); // Esta es la dirección a donde enviamos los datos del formulario
+
+   $mensaje=   "Nombre de/la interesado/a: ".$name."\n
+            Direccion de Email: ".$email."\n
+            Teléfono: ".$phone."\n
+            Tipo de carga: ".$type."\n
+            Cantidad: ".$quantity."\n
+            Destino: ".$destination."\n
+            Mensaje: ".$quote_message."\n";
+
+   $mail->Subject = "Pedido de cotización de ".$name; // Este es el titulo del email.
+   $mensajeHtml = nl2br($mensaje);   
+   $mail->Body = $mensaje; // Texto del email en formato 
+   $mail->AltBody = "";
+   // FIN - VALORES A MODIFICAR //
+
+   $estadoEnvio = $mail->Send(); 
+   if($estadoEnvio){
+      echo'<script type="text/javascript">
+        alert("El correo fue enviado correctamente.");
+        window.location.href="http://www.imcisrl.com.ar";
+        </script>';
+        
+   } else {
+      echo'<script type="text/javascript">
+        alert("Ocurrio un erro en el envío del correo.");
+        window.location.href="http://www.imcisrl.com.ar";
+        </script>';
+      
+   }
+   //{$mensaje} \n\n Formulario de ejemplo By DonWeb
 ?>
