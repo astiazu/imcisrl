@@ -12,7 +12,7 @@
     <title>IMCI SRL</title>
 
     <!--====== FAVICON ICON =======-->
-    <link rel="shortcut icon" type="image/ico" href="imcisrl.html/favicon.png">
+    <link rel="shortcut icon" type="image/ico" href="/img/favicon.png">
 
     <!--====== STYLESHEETS ======-->
     <link rel="stylesheet" href="normalize.css">
@@ -29,6 +29,8 @@
     <link href="responsive.css" rel="stylesheet">
 
     <script src="modernizr-2.8.3.min.js.descarga"></script>
+<style type="text/css">.fancybox-margin{margin-right:0px;}</style>
+<script type="text/javascript">const tlJsHost = ((window.location.protocol == "https:") ? "https://secure.trust-provider.com/" : "http://www.trustlogo.com/"); document.write(unescape("<script src='" + tlJsHost + "trustlogo/javascript/trustlogo.js' type='text/javascript' %3E%3C/script%3E"));</script>
 </head>
 
 <body class="home-one">
@@ -68,7 +70,7 @@
                             <ul id="nav" class="nav navbar-nav">
                                 <li class=""><a href="#">home</a></li>
                                 <!-- <li class=""><a href="#blog ">Blog</a></li> -->
-                                <li class=""><a href="#about">Nosotros</a></li>
+                                <li class=""><a href="#blog">Nosotros</a></li>
                                 <li class=""><a href="#service">Servicios</a></li>
                                 <!-- <li class=""><a href="#features">características</a></li> -->
                                 <li class=""><a href="#contact">Contacto</a></li>
@@ -303,7 +305,7 @@
                 <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
                     <div class="single-blog wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
                         <div class="blog-image">
-                            <img src="blog_2.jpg" alt="">
+                            <img src="imci_flete_a3.jpg" alt="">
                         </div>
                         <div class="blog-details text-center">
                             <div class="blog-meta"><a href="#"><i class="fa fa-plane"></i></a></div>
@@ -338,20 +340,20 @@
                 <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
                     <div class="quote-form-area wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
                         <h3>CONSIGUE UNA COTIZACIÓN</h3>
-                        <form name= "getCotizacion"class="quote-form" action="./imcisrl_files/php/getCotizacion.php" method="post"> 
+                            <form name= "getCotizacion.php" class="quote-form" action="./php/getCotizacion.php" method="post"> 
                             <p class="width-full">
-                                <input type="text" name="name" id="name" placeholder="Su Nombre">
+                                <input type="text" name="name" id="name" placeholder="Su Nombre" required>
                             </p>
                             <p class="width-half">
-                                <input type="email" name="email" id="email" placeholder="Email">
-                                <input class="pull-right" type="text" name="phone" id="phone" placeholder="Teléfono">
+                                <input type="email" name="email" id="email" placeholder="Email" required>
+                                <input class="pull-right" type="text" name="phone" id="phone" placeholder="Teléfono" required>
                             </p>
                             <p class="width-half">
-                                <input type="text" name="type" id="type" placeholder="Tipo">
-                                <input class="pull-right" type="text" name="quantity" id="quantity" placeholder="Cantidad">
+                                <input type="text" name="type" id="type" placeholder="Tipo" required>
+                                <input class="pull-right" type="text" name="quantity" id="quantity" placeholder="Cantidad" required>
                             </p>
                             <p class="width-full">
-                                <input type="text" name="destination" id="destination" placeholder="Destino">
+                                <input type="text" name="destination" id="destination" placeholder="Destino" required>
                             </p>
                             <p>
                                 <textarea name="quote-message" id="quote-message" cols="30" rows="4" placeholder="Su mensaje..."></textarea>
@@ -493,7 +495,7 @@
                                 </div>
                                 <div class="service-details">
                                     <h4>Seguros</h4>
-                                    <p></p>
+                                    <p>Seguridad a la hora de elegirnos.</p>
                                     <!-- <a href="#">Leer Más</a> -->
                                 </div>
                             </div>
@@ -505,7 +507,7 @@
                                 </div>
                                 <div class="service-details">
                                     <h4>Cargas especiales</h4>
-                                    <p></p>
+                                    <p>Logística para todo tipo de cargas.</p>
                                     <!-- <a href="#">Leer Más</a> -->
                                 </div>
                             </div>
@@ -626,17 +628,12 @@
                     </div>
                     <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
                         <div class="subscriber-form-area">
-                            <form action="procesa_susc.php" method = "GET" class="subsriber-form">
+                            <form action="./php/procesa_susc.php" method = "POST" class="subscriber-form">
                                 <label for="subscriber-mail"><i class="fa fa-envelope-o"></i></label>
-                                <input type="email" name="subscriber-mail" id="email" placeholder="Ingrese su eMail">
+                                <input type="email" name="subscriber-mail" id="email" placeholder="Ingrese su eMail" required>
                                 <button type="submit">subscribir</button>
                             </form>
 
-                            <!-- <form action="../imcisrl_files/php/procesa_susc.php" metod = "post" class="subsriber-form">
-                                <label for="subscriber-mail"><i class="fa fa-envelope-o"></i></label>
-                                <input type="email" name="email" id="email" placeholder="Ingrese su eMail">
-                                <button type="submit">subscribir</button>
-                            </form> -->
                         </div>
                     </div>
                 </div>
@@ -723,6 +720,7 @@
                         <div class="footer-copyright wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
                             
                             <p>Copyright ©Astiazu, D'Alessandro & Grassi<script>(new Date().getFullYear());</script> 2021. Todos los derechos reservados.</p>
+<script language="JavaScript" type="text/javascript">TrustLogo("https://micuenta.donweb.com/img/sectigo_positive_sm.png", "CL1", "none");</script><a href="https://donweb.com/es-ar/certificados-ssl" id="comodoTL" title="Certificados SSL Argentina">Certificados SSL Argentina</a>
                             
                         </div>
                     </div>

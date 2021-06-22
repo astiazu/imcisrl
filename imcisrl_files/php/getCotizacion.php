@@ -30,7 +30,7 @@ if ( !isset($_POST["name"]) ) {
    $smtpUsuario = getenv("imciSmtpUser");  // Mi cuenta de correo
    $smtpClave = getenv("imciSmtpPassword");  // Mi contraseña
 
-   // Email donde se enviaran los datos cargados en el formulario de contacto
+  // Email donde se enviaran los datos cargados en el formulario de contacto
    $emailDestino = "info@imcisrl.com.ar";
 
    $mail = new PHPMailer();

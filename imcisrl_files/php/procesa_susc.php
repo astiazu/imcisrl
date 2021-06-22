@@ -14,13 +14,12 @@ if ( !isset($_POST["subscriber-mail"]) ) {
     echo ("Es necesario completar todos los datos del formulario");
 }
    $email = $_POST["subscriber-mail"];
-   $mensaje = $_POST["Suscripcion a la información nueva de la página web"];
+   $mensaje = "Suscripcion a la información nueva de la página web";
 
    // Datos de la cuenta de correo utilizada para enviar vía SMTP
    $smtpHost = getenv("imciSmtpHost");  // Dominio alternativo brindado en el email de alta 
    $smtpUsuario = getenv("imciSmtpUser");  // Mi cuenta de correo
    $smtpClave = getenv("imciSmtpPassword");  // Mi contraseña
-   alert("host " + $smtpHost + ", Usuario = " + $smtpUsuario + ", Password =" + $smtpClave);
 
    // Email donde se enviaran los datos cargados en el formulario de contacto
    $emailDestino = "info@imcisrl.com.ar";

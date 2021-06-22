@@ -347,7 +347,8 @@ input:-webkit-autofill:focus {
 }
 
 .top-area-bg {
-    background: rgba(0, 0, 0, 0) url("../img/imci_flete_a2.jpeg") no-repeat scroll center center / cover;
+    /* background: rgba(110, 110, 110, 0.329) url("../img/imci_flete_a3.jpg") no-repeat scroll center center / cover; */
+    background: url("../img/imci_flete_a3.jpg") no-repeat scroll center center / cover;
     height: 100%;
     left: 0;
     position: absolute;
@@ -356,7 +357,7 @@ input:-webkit-autofill:focus {
 }
 
 .top-area-bg::after {
-    background: #3c4147;
+    background: #72727252;
     content: "";
     height: 100%;
     left: 0;
@@ -713,7 +714,7 @@ ul#nav li ul a,
 }
 
 .slider-bg-one {
-    background: url("../img/imci_flete_a2.jpeg") no-repeat scroll center center / cover;
+    background: url("../img/imci_flete_a3.jpeg") no-repeat scroll center center / cover;
 }
 
 .slider-bg-two {
