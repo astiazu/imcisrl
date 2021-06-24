@@ -265,7 +265,7 @@ input:-webkit-autofill:focus {
 
 .area-title h2::before,
 .area-title h2::after {
-    background: rgba(0, 0, 0, 0) url("title-border.png") repeat scroll 0 0;
+    /*background: rgba(0, 0, 0, 0) url("./img/title-border.png") repeat scroll 0 0; img not found*/ 
     bottom: 0;
     content: "";
     height: 2px;
@@ -714,7 +714,7 @@ ul#nav li ul a,
 }
 
 .slider-bg-one {
-    background: url("../img/imci_flete_a3.jpeg") no-repeat scroll center center / cover;
+    background: url("../img/imci_flete_a3.jpg") no-repeat scroll center center / cover;
 }
 
 .slider-bg-two {
@@ -1700,7 +1700,7 @@ a.action-bottom h4 {
 }
 
 .footer-border {
-    background: rgba(0, 0, 0, 0) url("footer-border.png") repeat-x scroll center center;
+    /*background: rgba(0, 0, 0, 0) url("footer-border.png") repeat-x scroll center center; img not found */
     height: 1px;
     margin-top: 50px;
 }
